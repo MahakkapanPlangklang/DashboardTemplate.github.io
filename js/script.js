@@ -1,29 +1,41 @@
-// Login page script
-const loginForm = document.querySelector('.login-form');
-const loginUsernameInput = document.querySelector('#username');
-const loginPasswordInput = document.querySelector('#password');
+const loginBtn = document.getElementById('login-btn');
+const signupBtn = document.getElementById('signup-btn');
+const loginForm = document.getElementById('login-form');
+const signupForm = document.getElementById('signup-form');
+const closeBtns = document.querySelectorAll('.close-btn');
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = loginUsernameInput.value;
-    const password = loginPasswordInput.value;
-    // TO DO: implement login logic here
-    console.log(`Username: ${username}, Password: ${password}`);
+// Add event listeners to the buttons
+loginBtn.addEventListener('click', () => {
+    loginForm.classList.add('show');
 });
 
-// Sign up page script
-const signupForm = document.querySelector('.signup-form');
-const signupUsernameInput = document.querySelector('#username');
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
-const confirmPasswordInput = document.querySelector('#confirm-password');
+signupBtn.addEventListener('click', () => {
+    signupForm.classList.add('show');
+});
+
+// Add event listeners to the close buttons
+closeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        loginForm.classList.remove('show');
+        signupForm.classList.remove('show');
+    });
+});
+
+// Add event listeners to the forms
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    // TO DO: implement login logic here
+    console.log(`Login form submitted with username: ${username} and password: ${password}`);
+});
 
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const username = signupUsernameInput.value;
-    const email = emailInput.value;
-    const password = passwordInput.value;
-    const confirmPassword = confirmPasswordInput.value;
-    // TO DO: implement sign up logic here
-    console.log(`Username: ${username}, Email: ${email}, Password: ${password}, Confirm Password: ${confirmPassword}`);
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    // TO DO: implement signup logic here
+    console.log(`Signup form submitted with username: ${username}, email: ${email}, password: ${password}, and confirm password: ${confirmPassword}`);
 });

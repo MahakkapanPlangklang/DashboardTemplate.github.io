@@ -1,19 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    margin: 20px;
 }
 
-.container {
-    max-width: 300px;
-    margin: 40px auto;
-    padding: 20px;
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #fff;
-    border: 1px solid #ddd;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-form {
-    margin: 20px;
+.popup-form.show {
+    display: block;
 }
 
 label {
@@ -21,7 +25,7 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -39,4 +43,17 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #3e8e41;
+}
+
+.close-btn {
+    background-color: #ccc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #aaa;
 }
