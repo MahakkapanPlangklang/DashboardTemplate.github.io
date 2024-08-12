@@ -3,29 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Sign up</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Template Website</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Login and Sign up</h1>
-    <button id="login-btn">Login</button>
-    <button id="signup-btn">Sign up</button>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Template Website</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="login-btn">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="signup-btn">Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Template Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <button class="btn btn-primary">Learn More</button>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </li>
+                <li>
+                    <i class="fas fa-code"></i>
+                    <h3>Latest Bootstrap Framework</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </li>
+                <li>
+                    <i class="fas fa-image"></i>
+                    <h3>Photo Gallery</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </li>
+                <li>
+                    <i class="fas fa-video"></i>
+                    <h3>Video Background</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex."</p>
+                <h3>John Doe</h3>
+                <span>CEO, ABC Company</span>
+            </div>
+            <div class="testimonial">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex."</p>
+                <h3>Jane Doe</h3>
+                <span>Marketing Manager, DEF Company</span>
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+        <div class="container">
+            <h2>Get Started Today!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <button class="btn btn-primary">Sign Up Now</button>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Template Website. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <div class="popup-form" id="login-form">
-        <h2>Login</h2>
-        <form>
+    <!-- Login and Signup Popup -->
+    <div class="popup-container">
+      <div class="popup">
+        <div class="popup-header">
+          <h2>Login</h2>
+          <button class="close-btn">&times;</button>
+        </div>
+        <div class="popup-body">
+          <form id="login-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"><br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"><br><br>
-            <input type="submit" value="Login">
-            <button class="close-btn">Close</button>
-        </form>
-    </div>
-
-    <div class="popup-form" id="signup-form">
-        <h2>Sign up</h2>
-        <form>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="popup-header">
+          <h2>Signup</h2>
+          <button class="close-btn">&times;</button>
+        </div>
+        <div class="popup-body">
+          <form id="signup-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"><br><br>
             <label for="email">Email:</label>
@@ -34,11 +134,12 @@
             <input type="password" id="password" name="password"><br><br>
             <label for="confirm-password">Confirm Password:</label>
             <input type="password" id="confirm-password" name="confirm-password"><br><br>
-            <input type="submit" value="Sign up">
-            <button class="close-btn">Close</button>
-        </form>
+            <button type="submit">Signup</button>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
