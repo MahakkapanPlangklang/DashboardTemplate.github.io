@@ -1,252 +1,93 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-/* Header */
-header {
-    background: #f8f9fa;
-    padding: 10px 0;
-}
-
+/* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-bottom: 20px;
 }
 
-.navbar-brand {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
+.navbar-nav .nav-link {
+  color: #fff; /* Default link color */
 }
 
-.navbar-toggler {
-    border: none;
-    background: transparent;
+/* Active Link Styles */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link.active {
+  background-color: #fff; /* White background for active link */
+  color: #343a40; /* Dark text color */
+  border-radius: 0.25rem; /* Rounded corners */
+  font-weight: bold; /* Optional: Bold text */
 }
 
-.navbar-toggler-icon {
-    background: url('data:image/svg+xml;base64,...') no-repeat center;
-    width: 30px;
-    height: 30px;
+/* Hover Link Styles */
+.navbar-nav .nav-link:hover {
+  background-color: #f8f9fa; /* Light background on hover */
+  color: #343a40; /* Dark text color */
 }
 
-.navbar-nav {
-    list-style: none;
-    display: flex;
+/* Header with Carousel */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 1rem; /* Padding around the text */
 }
 
-.nav-item {
-    margin-left: 20px;
+/* Main Content Styles */
+.container {
+  margin-top: 20px;
 }
 
-.nav-link {
-    color: #333;
-    text-decoration: none;
+.row {
+  margin-bottom: 20px;
 }
 
-/* Hero Section */
-.hero {
-    background: url('path/to/your/hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
+/* Feature Cards */
+.card {
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 0.25rem; /* Rounded corners */
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.card-body {
+  padding: 1.25rem; /* Padding inside the card */
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background: #0056b3;
-}
-
-/* Features Section */
-.features {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-.features ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.features li {
-    width: 22%;
-    padding: 10px;
-}
-
-.features i {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.features h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.features p {
-    font-size: 16px;
-}
-
-/* Testimonials Section */
-.testimonials {
-    background: #f8f9fa;
-    padding: 60px 0;
-}
-
-.testimonials h2 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.testimonial {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.testimonial p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.testimonial h3 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.testimonial span {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Call to Action Section */
-.call-to-action {
-    background: #007bff;
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.call-to-action h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.call-to-action p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    background: #f8f9fa;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #343a40; /* Dark background for footer */
+  color: #fff; /* White text color */
+  padding: 1rem; /* Padding around the footer text */
+  font-size: 0.875rem; /* Slightly smaller text size */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
-footer p {
-    font-size: 14px;
-    color: #333;
+/* Section Headings */
+h1, h2 {
+  color: #343a40; /* Dark color for headings */
 }
 
-/* Popup */
-.popup-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+/* Section Content */
+p {
+  line-height: 1.6; /* Improved readability */
 }
 
-.popup {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 400px;
-    position: relative;
+/* Adjustments for Footer Position */
+html, body {
+  height: 100%;
 }
 
-.popup-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-.close-btn {
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.popup-body {
-    margin-top: 20px;
-}
-
-.popup-body form {
-    display: flex;
-    flex-direction: column;
-}
-
-.popup-body label {
-    margin-bottom: 5px;
-}
-
-.popup-body input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.popup-body button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.popup-body button:hover {
-    background: #0056b3;
+.main-content {
+  flex: 1;
 }
