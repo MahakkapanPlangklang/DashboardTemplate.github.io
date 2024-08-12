@@ -1,0 +1,172 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  a:hover {
+    color: #23527c;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav li {
+    margin-right: 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+  
+  header nav a:hover {
+    color: #ccc;
+  }
+  
+  /* Slider/Carousel Styles */
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  
+  .carousel-item.active {
+    display: block;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .carousel-control-prev {
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    right: 10px;
+  }
+  
+  /* Scrolling Animation Styles */
+  
+  .scrolling-animation {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .scrolling-animation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .scrolling-animation p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  /* YouTube Video Background Styles */
+  
+  .youtube-video-background {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .youtube-video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Photo Gallery Styles */
+  
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .photo-gallery a {
+    margin: 10px;
+    display: inline-block;
+  }
+  
+  .photo-gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .photo-gallery a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
