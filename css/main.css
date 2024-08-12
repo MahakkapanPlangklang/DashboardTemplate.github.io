@@ -45,31 +45,31 @@ footer {
     padding: 10px 0;
 }
 
+/* กำหนดขนาดของรูปภาพให้พอดีกับพื้นที่ที่กำหนด */
 img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%; /* รูปภาพจะไม่เกินความกว้างของบรรจุภัณฑ์ */
+    height: auto; /* ความสูงจะถูกปรับตามความกว้างเพื่อรักษาสัดส่วน */
 }
 
-
-.logo {
-    width: 150px; 
-    height: auto; 
+/* กำหนดขนาดเฉพาะสำหรับรูปภาพในส่วนต่างๆ ของเว็บไซต์ */
+.header-image {
+    width: 100%; /* รูปภาพจะครอบคลุมความกว้างทั้งหมดของส่วนเฮดเดอร์ */
+    height: 400px; /* ความสูงที่กำหนดไว้ */
+    object-fit: cover; /* ปรับการแสดงผลให้เต็มพื้นที่ */
 }
 
-
-.background-image {
-    width: 100%;
-    height: 400px; 
-    background-size: cover; 
-    background-position: center; 
+.product-image {
+    width: 300px; /* กำหนดความกว้างของรูปภาพสินค้า */
+    height: 200px; /* กำหนดความสูงของรูปภาพสินค้า */
+    object-fit: cover; /* ปรับการแสดงผลให้เต็มพื้นที่ */
 }
 
-
-.gallery img {
-    width: 100%; 
-    height: auto; 
-    margin-bottom: 15px; 
+.thumbnail {
+    width: 150px; /* กำหนดขนาดของรูปภาพย่อ */
+    height: 150px; /* กำหนดขนาดของรูปภาพย่อ */
+    object-fit: cover; /* ปรับการแสดงผลให้เต็มพื้นที่ */
 }
+
 
 
 .team-member img {
