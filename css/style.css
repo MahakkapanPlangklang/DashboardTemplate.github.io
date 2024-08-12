@@ -23,13 +23,18 @@
     color: #23527c;
   }
   
-  /* Header Styles */
+  /* Sticky Header Styles */
   
   header {
     background-color: #337ab7;
     color: #fff;
     padding: 1em;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
   }
   
   header nav {
@@ -127,22 +132,34 @@
     margin-bottom: 20px;
   }
   
-  /* YouTube Video Background Styles */
+  /* List of Features Styles */
   
-  .youtube-video-background {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    margin-bottom: 20px;
+  .features {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
   }
   
-  .youtube-video-background iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  .features h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .features ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .features li {
+    margin-bottom: 10px;
+  }
+  
+  .features li:before {
+    content: "\2713";
+    font-size: 18px;
+    color: #337ab7;
+    margin-right: 10px;
   }
   
   /* Photo Gallery Styles */
